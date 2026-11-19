@@ -1,0 +1,23 @@
+*Custom Compiler Version V-2023.12-6
+*Fri Jan 23 16:05:29 2026
+
+*.SCALE METER
+*.LDD
+
+********************************************************************************
+* Library          : GP
+* Cell             : OTA_placement
+* View             : schematic
+* View Search List : auCdl schematic
+* View Stop List   : auCdl
+********************************************************************************
+.subckt OTA_placement net9 vb vdd vin1 vin2 vss
+*.PININFO net9:I vb:I vdd:I vin1:I vin2:I vss:I
+MM0 net13 net13 vdd vdd p08 l=0.014u nf=2 m=16 nfin=2
+MM1 net9 net13 vdd vdd p08 l=0.014u nf=2 m=16 nfin=2
+MM4 net15 vb vss vss n08 l=0.014u nf=2 m=16 nfin=2
+MM2 net13 vin1 net15 vss n08 l=0.014u nf=2 m=36 nfin=2
+MM3 net9 vin2 net15 vss n08 l=0.014u nf=2 m=36 nfin=2
+.ends OTA_placement
+
+

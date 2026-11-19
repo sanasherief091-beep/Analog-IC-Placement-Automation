@@ -1,0 +1,62 @@
+================================================================================
+AUTOMATED ANALOG IC LAYOUT REPORT
+================================================================================
+
+[1] DESIGN SUMMARY
+Total Columns:    16
+Total Devices:    5
+Total Blocks:     3
+Total Rows:       7
+
+[2] CHARACTER LEGEND (Mapping)
+Char   | Device Name  | Model      | M-Factor
+--------------------------------------------------
+A      | MM0          | p08        | 16      
+B      | MM1          | p08        | 16      
+C      | MM2          | n08        | 32      
+D      | MM3          | n08        | 32      
+E      | MM4          | n08        | 16      
+e      | Dummy Cell   | N/A        | N/A     
+
+[3] PLACEMENT BLOCK DETAILS
+BLOCK 1: Current Mirror
+  - Devices:  MM1, MM0
+  - Strategy: INTER
+  - Logic:    Connected to differential pair
+  - Grid:     2 Rows x 16 Columns
+  - Matrix Visualization:
+    +------------------+
+    | BABABABABABABABA |
+    | BABABABABABABABA |
+    +------------------+
+
+--------------------------------------------------
+
+BLOCK 2: Differential Pair
+  - Devices:  MM3, MM2
+  - Strategy: INTER
+  - Logic:    Common-source topology match
+  - Grid:     4 Rows x 16 Columns
+  - Matrix Visualization:
+    +------------------+
+    | DCDCDCDCDCDCDCDC |
+    | DCDCDCDCDCDCDCDC |
+    | DCDCDCDCDCDCDCDC |
+    | DCDCDCDCDCDCDCDC |
+    +------------------+
+
+--------------------------------------------------
+
+BLOCK 3: Single Device
+  - Devices:  MM4
+  - Strategy: SINGLE
+  - Logic:    No matching circuit topology
+  - Grid:     1 Rows x 16 Columns
+  - Matrix Visualization:
+    +------------------+
+    | EEEEEEEEEEEEEEEE |
+    +------------------+
+
+--------------------------------------------------
+
+End of Report.
